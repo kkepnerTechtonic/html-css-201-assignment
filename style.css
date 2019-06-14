@@ -1,0 +1,18 @@
+
+body {
+    width: 100%;
+}
+
+.card01 {
+    background: cover url(assets/main-hero-mobile_compressed.jpg);
+    /* width: 100%; */
+}
+
+
+
+.btn-solid {
+    background-color: #F7F7F7;
+    border-radius: 1rem;
+    border: none;
+    padding: 1rem;
+}
