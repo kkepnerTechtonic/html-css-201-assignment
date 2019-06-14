@@ -4,6 +4,28 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #F7F7F7;
+}
+
+.hamburger {
+    width: 35px;
+    height: 4px;
+    background-color: #F7F7F7;
+    margin: 5px 0;
+  }
+
 .card01 {
     /* background-color: pink; */
     background-image: url(assets/main-hero-mobile_compressed.jpg);
@@ -56,4 +78,45 @@ body {
 
 footer {
     text-align: center;
+}
+
+/* MANY MEDIA QUERIES */
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 576px) {
+    body {
+        background-color: #bada55;
+    }
+    nav {
+        display: flex;
+        font-size: 0.75rem;
+        margin: 1rem;
+        justify-content: space-between;
+    }
+
+    .center-nav {
+        flex-grow: 1;
+    }
+}
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) { 
+    body {
+        background-color: #d68f13;
+    }
+    nav {
+        font-size: inherit;
+    }
+ }
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {     
+    body {
+        background-color: #3e63cb;
+    } 
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+    body {
+        background-color: #6f7b9e;
+    }
 }
