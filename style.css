@@ -10,14 +10,17 @@ body {
   grid-template-columns: 1fr;
   overflow-y: scroll;
   scroll-snap-type: y proximity;
+  color: #f7f7f7;
 }
 
 .container {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-}
+  scroll-snap-align: start;
 
+}
+/* navigation styles */
 header {
   display: flex;
   justify-content: space-between;
@@ -40,12 +43,6 @@ nav a {
   height: 2px;
   background-color: #f7f7f7;
   margin: 3px 0;
-}
-
-.title {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #f7f7f7;
 }
 
 .two-buttons {
@@ -78,12 +75,17 @@ nav a {
   color: #f7f7f7;
 }
 
+.claim-text {
+  font-size: 0.75rem;
+}
+
 .down-arrow {
   position: relative;
 }
 
 .vee {
   font-size: 1.5rem;
+  color: #f7f7f7;
   position: absolute;
   top: 0;
   left: 50%;
@@ -91,12 +93,16 @@ nav a {
   animation: bounce 3s ease-in 1s infinite;
 }
 
+.hero {
+  position: relative;
+  overflow: scroll;
+}
+
 .slider {
   display: flex;
   justify-content: center;
-  overflow-x: auto;
-  /* overflow: scroll; */
-  /* width: 100%; */
+  overflow: scroll;
+  width: 300%;
   height: 100vh;
   scroll-snap-type: x proximity;
 }
@@ -104,13 +110,20 @@ nav a {
 .slide {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  /* position: relative; */
+  justify-content: space-between;
   text-align: center;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  min-height: 100%;
   flex-shrink: 0;
+  padding-bottom: 8rem;
   scroll-snap-align: start;
+}
+
+.title {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #f7f7f7;
 }
 
 .btn-solid {
@@ -152,7 +165,6 @@ nav a {
 }
 
 .card01 {
-  /* background-color: pink; */
   background-image: url(assets/main-hero-mobile_compressed.jpg);
   background-image:
     -webkit-image-set(
@@ -160,22 +172,18 @@ nav a {
       url(assets/main-hero-landscape_compressed.jpg) 2x,
       url(assets/main-hero-desktop_compressed.jpg) 3x
   );
-  background-image:
-    image-set(
-        url(assets/main-hero-mobile_compressed.jpg) 1x,
-        url(assets/main-hero-landscape_compressed.jpg) 2x,
-        url(assets/main-hero-desktop_compressed.jpg) 3x
-    );
   background-position: center;
   z-index: -333;
   width: 100%;
   height: 100vh;
-  /* scroll-snap-align: start; */
 }
 
 .card02 {
   position: relative;
-  /* scroll-snap-align: start; */
+}
+
+.title-with-text {
+  flex-grow: 2;
 }
 
 .power-video {
@@ -189,7 +197,6 @@ nav a {
 
 .card03 {
   position: relative;
-  /* scroll-snap-align: start; */
 }
 
 .acc-video {
@@ -217,12 +224,14 @@ footer {
   /* scroll-snap-align: start; */
 }
 
+footer p {
+  color: #000;
+  font-size: 0.8rem;
+}
+
 /******  MEDIA QUERIES ******/
 /* Small devices (landscape phones, 576px and up) */
-@media screen and (min-width: 576px) {
-  body {
-    background-color: #bada55;
-  }
+@media screen and (min-width: 650px) {
   nav {
     display: flex;
     font-size: 0.75rem;
@@ -235,9 +244,6 @@ footer {
 }
 /* Medium devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
-  body {
-    background-color: #d68f13;
-  }
   nav {
     font-size: inherit;
   }
