@@ -18,7 +18,7 @@ body {
   height: 100vh;
   overflow: hidden;
   scroll-snap-align: start;
-
+  scroll-snap-stop: always;
 }
 /* navigation styles */
 header {
@@ -26,7 +26,6 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  /* background-color: pink; */
 }
 
 nav {
@@ -59,7 +58,6 @@ nav a {
   border: 2px solid #f7f7f7;
   border-radius: 50%;
   display: inline-block;
-  /* transition: #f7f7f7 0.6s ease; */
 }
 
 .dot.filled {
@@ -117,6 +115,7 @@ nav a {
   flex-shrink: 0;
   padding-bottom: 8rem;
   scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .title {
